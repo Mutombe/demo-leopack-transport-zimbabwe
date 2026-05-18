@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Leopack — redirecting…</title>
+    <script>
+      // Single Page Apps for GitHub Pages / Render — stash deep path then bounce to root.
+      // main.jsx reads sessionStorage['leopack:spa-redirect'] and rehydrates history.
+      (function () {
+        try {
+          var l = window.location;
+          sessionStorage.setItem(
+            'leopack:spa-redirect',
+            l.pathname + l.search + l.hash
+          );
+          l.replace(l.protocol + '//' + l.host + '/');
+        } catch (e) {
+          window.location.replace('/');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <noscript>
+      Page not found. <a href="/">Return to Leopack home</a>.
+    </noscript>
+  </body>
+</html>
